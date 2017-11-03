@@ -36,8 +36,8 @@ let handleWeatherResponse = function(response) {
 $(".forecast").empty();
 
 let markup= "";
-      for(let i=1; i<7; i++) {
-        markup += "<div class='col-2'>";
+      for(let i=0; i<7; i++) {
+        markup += "<div class='col'>";
         markup += "<h3 class='icon'>" + icon(response.daily.data[i]) + "</h3>";
         markup += "<h4 class='temperatureHigh'>" + Math.round(response.daily.data[i].temperatureHigh) + " | " + Math.round(response.daily.data[i].temperatureLow) + "</h4>";
         markup += "<h5 class='summary'>" + response.daily.data[i].summary + "</h5>";
